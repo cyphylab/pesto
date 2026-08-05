@@ -1,4 +1,3 @@
-import argparse
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
@@ -32,23 +31,9 @@ from triangle_utils import (
         TrianglePoints,
 )
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--i', type=int, default=0)
-args = parser.parse_args()
-
-if args.i == 0:
-    FILE_POSE = 'data/U_shaped_obstacles_1/optitrack values.csv'
-    FILE_CLOUD = 'data/U_shaped_obstacles_1/point_cloud.csv'
-    #FILE_POSE = 'data/L_shaped_obstacles_1/optitrack values.csv'
-    #FILE_CLOUD = 'data/L_shaped_obstacles_1/point_cloud.csv'
-    #folder = 'more_data/lab/commonarea3'
-    #FILE_POSE = f'{folder}/optitrack values.csv'
-    #FILE_CLOUD = f'{folder}/point_cloud.csv'
-    OPTITRACK_CORRECTION_TYPE = 'ANGLE'
-else:
-    FILE_POSE = 'data/pasta_normal_shape_walking_around/optitrack values.csv'
-    FILE_CLOUD = 'data/pasta_normal_shape_walking_around/point_cloud.csv'
-    OPTITRACK_CORRECTION_TYPE = 'A'
+FILE_POSE = 'example_data/U_shaped_obstacles_1/optitrack values.csv'
+FILE_CLOUD = 'example_data/U_shaped_obstacles_1/point_cloud.csv'
+OPTITRACK_CORRECTION_TYPE = 'ANGLE'
 
 PLAY = False
 
